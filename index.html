@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<script src="main.js"></script> 
+<style>
+</style>
+<body>
+<div id="app">
+</div>
+Elegi tu propia aventura! 
+
+Opcion 1:
+<button onclick="miFuncionClick('mendoza')">Ir a Mendoza
+</button>
+
+Opcion2
+<button onclick="miFuncionClick('cordoba')">Ir a Cordoba
+</button>
+
+Opcion3
+<button onclick="miFuncionClick('tierrafuego')">Ir a Tierra del Fuego 
+</button>
+
+<script>
+/* Comentario de varias lineas
+console.log("Hola mundo!")
+console.log("Hola mundo")
+*/
+
+function suma(a, b){
+	console.log("La suma es: ", a + b)
+}
+const unaMas = "La tercer forma de definir una variable"
+let otra_forma = "Otra forma"
+let otraForma = "Otra forma"
+// console.log(miVariable) 
+console.log(otraForma) 
+console.log(unaMas) 
+
+const total = (5 * 6) + 5
+if(total > 5) {
+  console.log("El total es: ", total, ", es correcto?")
+} else {
+  console.log("El total es menor a 5")
+}
+
+const Alumno = {
+	nombre: "Xavier Petit",
+	edad: 33,
+	cursando: "Python",
+	suma: function(a, b){
+		const resultado = a + b
+		return resultado
+	}
+}
+console.log("El nombre del alumno es: ", Alumno.nombre)
+console.log("La edad es: ", Alumno["edad"])
+
+// suma(5, 10)
+const res = Alumno.suma(5, 10)
+console.log("El resultado es ", res)
+
+const lista = [1, 2, 3, 4]
+console.log(lista)
+
+function imprimir(x){
+	console.log("Imprimiendo x:", x)
+
+}
+// Similar a lambda en python
+// estas son funciones anonimas en javascript
+lista.forEach( e => console.log(e))
+lista.forEach(function(e) { 
+	console.log(e)
+} )
+
+for (const e of lista){
+	console.log("For of example: ", e)
+}
+
+for (let i = 0; i < lista.length; i++) {
+	console.log(`Lista en elemento ${i} su valor es ${lista[i]}`)
+} 
+
+let i = 0
+do {
+  console.log(`While lista en elemento ${i} su valor es ${lista[i]}`)
+  i++
+} while (i < lista.length );
+
+lista.forEach(imprimir)
+
+// document.write("<b>Hola este es un mensaje en el DOM</b>")
+const miApp = document.querySelector('#app');
+miApp.innerHTML = "<b>Hola mundo </b>"
+
+miApp.onclick = function() {
+	console.log("Hiciste click")
+	miApp.innerHTML = "<b>Hiciste click</b>"
+
+}
+console.log(miApp)
+
+function miFuncionClick(aventura){
+	switch(aventura){
+		case 'mendoza':
+			console.log("Elegiste ", aventura)
+			break;
+		case 'cordoba':
+			console.log("Elegiste ", aventura)
+			break;
+		case 'tierrafuego':
+			console.log(`Elegiste,${aventura}`)
+			break;
+	}
+
+}
+
+fetch("https://httpbing.org/get").then(rsp => console.log(rsp.data))
+
+/*
+def imprimir(x):
+    print(x)
+for x in lista { imprimir(x)}
+*/
+// comentario de una sola linea
+
+</script>
+</body>
+</html> 
