@@ -1,160 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>javascript Course</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <title>javascript Course</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
 
-<script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
 
-<script src="js/main.js"></script> 
-<style>
-</style>
-</head>
-<body>
-<div class="mx-auto my-5">
-	<button class="flex flex-row mx-auto hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-600 p-2 rounded" onclick="darkMode()"><p class="mr-2">Dark mode </p><span class="iconify" data-icon="bi:moon"></span></button>
-</div>
+    <script src="js/main.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <div class="mx-auto my-5">
+      <button
+        class="
+          flex flex-row
+          mx-auto
+          hover:bg-red-500
+          focus:outline-none focus:ring-2 focus:ring-red-600
+          p-2
+          rounded
+        "
+        onclick="darkMode()"
+      >
+        <p class="mr-2">Dark mode</p>
+        <span class="iconify" data-icon="bi:moon"></span>
+      </button>
+    </div>
 
-<div class="flex flex-row">
-	<span class="iconify mx-2" data-icon="flat-color-icons:alarm-clock"></span>
-	<div id="MyClock" class="clock" onload="showTime()">
-</div>
+    <div class="flex flex-row">
+      <span
+        class="iconify mx-2"
+        data-icon="flat-color-icons:alarm-clock"
+      ></span>
+      <div id="MyClock" class="clock" onload="showTime()"></div>
 
-</div>
-<div class="container mx-5">
-<div id="app">
-</div>
-Elegi tu propia aventura! 
+    </div>
+      <button class="bg-red-500 rounded" onclick="showOptions()">Ocultar aventura</button>
+    <div id="aventura" >
+      <div class="container mx-5">
+        <div id="app"></div>
+        Elegi tu propia aventura!
 
-<div class="my-2" >
-Opcion 1:
-<button class="bg-red-500 px-2 rounded" onclick="miFuncionClick('mendoza')">Ir a Mendoza
-</button>
-</div>
+        <div class="my-2">
+          Opcion 1:
+          <button
+            class="bg-red-500 px-2 rounded"
+            onclick="miFuncionClick('mendoza')"
+          >
+            Ir a Mendoza
+          </button>
+        </div>
 
-<div class="my-2" >
-Opcion2
-<button class="bg-red-500 px-2 rounded" onclick="miFuncionClick('cordoba')">Ir a Cordoba
-</button>
-</div>
+        <div class="my-2">
+          Opcion2
+          <button
+            class="bg-red-500 px-2 rounded"
+            onclick="miFuncionClick('cordoba')"
+          >
+            Ir a Cordoba
+          </button>
+        </div>
 
-<div class="my-2" >
-Opcion3
-<button class="bg-red-500 px-2 rounded"  onclick="miFuncionClick('tierrafuego')">Ir a Tierra del Fuego 
-</button>
-</div>
-</div>
+        <div class="my-2">
+          Opcion3
+          <button
+            class="bg-red-500 px-2 rounded"
+            onclick="miFuncionClick('tierrafuego')"
+          >
+            Ir a Tierra del Fuego
+          </button>
+        </div>
+      </div>
+    </div>
 
-<script>
-/* Comentario de varias lineas
+    <script>
+      /* Comentario de varias lineas
 console.log("Hola mundo!")
 console.log("Hola mundo")
 */
-function suma(a, b){
-	console.log("La suma es: ", a + b)
-}
-const unaMas = "La tercer forma de definir una variable"
-let otra_forma = "Otra forma"
-let otraForma = "Otra forma"
-// console.log(miVariable) 
-console.log(otraForma) 
-console.log(unaMas) 
+      function suma(a, b) {
+        console.log("La suma es: ", a + b);
+      }
+      const unaMas = "La tercer forma de definir una variable";
+      let otra_forma = "Otra forma";
+      let otraForma = "Otra forma";
+      // console.log(miVariable)
+      console.log(otraForma);
+      console.log(unaMas);
 
-const total = (5 * 6) + 5
-if(total > 5) {
-console.log("El total es: ", total, ", es correcto?")
-} else {
-console.log("El total es menor a 5")
-}
+      const total = 5 * 6 + 5;
+      if (total > 5) {
+        console.log("El total es: ", total, ", es correcto?");
+      } else {
+        console.log("El total es menor a 5");
+      }
 
-const Alumno = {
-	nombre: "Xavier Petit",
-	edad: 33,
-	cursando: "Python",
-	suma: function(a, b){
-		const resultado = a + b
-		return resultado
-	}
-}
-console.log("El nombre del alumno es: ", Alumno.nombre)
-console.log("La edad es: ", Alumno["edad"])
+      const Alumno = {
+        nombre: "Xavier Petit",
+        edad: 33,
+        cursando: "Python",
+        suma: function (a, b) {
+          const resultado = a + b;
+          return resultado;
+        },
+      };
+      console.log("El nombre del alumno es: ", Alumno.nombre);
+      console.log("La edad es: ", Alumno["edad"]);
 
-// suma(5, 10)
-const res = Alumno.suma(5, 10)
-console.log("El resultado es ", res)
+      // suma(5, 10)
+      const res = Alumno.suma(5, 10);
+      console.log("El resultado es ", res);
 
-const lista = [1, 2, 3, 4]
-console.log(lista)
+      const lista = [1, 2, 3, 4];
+      console.log(lista);
 
-function imprimir(x){
-	console.log("Imprimiendo x:", x)
+      function imprimir(x) {
+        console.log("Imprimiendo x:", x);
+      }
+      // Similar a lambda en python
+      // estas son funciones anonimas en javascript
+      lista.forEach((e) => console.log(e));
+      lista.forEach(function (e) {
+        console.log(e);
+      });
 
-}
-// Similar a lambda en python
-// estas son funciones anonimas en javascript
-lista.forEach( e => console.log(e))
-lista.forEach(function(e) { 
-	console.log(e)
-} )
+      for (const e of lista) {
+        console.log("For of example: ", e);
+      }
 
-for (const e of lista){
-	console.log("For of example: ", e)
-}
+      for (let i = 0; i < lista.length; i++) {
+        console.log(`Lista en elemento ${i} su valor es ${lista[i]}`);
+      }
 
-for (let i = 0; i < lista.length; i++) {
-	console.log(`Lista en elemento ${i} su valor es ${lista[i]}`)
-} 
+      let i = 0;
+      do {
+        console.log(`While lista en elemento ${i} su valor es ${lista[i]}`);
+        i++;
+      } while (i < lista.length);
 
-let i = 0
-do {
-  console.log(`While lista en elemento ${i} su valor es ${lista[i]}`)
-  i++
-} while (i < lista.length );
+      lista.forEach(imprimir);
 
-lista.forEach(imprimir)
+      // document.write("<b>Hola este es un mensaje en el DOM</b>")
+      const miApp = document.querySelector("#app");
+      miApp.innerHTML = "<b>Hola mundo </b>";
 
-// document.write("<b>Hola este es un mensaje en el DOM</b>")
-const miApp = document.querySelector('#app');
-miApp.innerHTML = "<b>Hola mundo </b>"
+      miApp.onclick = function () {
+        console.log("Hiciste click");
+        miApp.innerHTML = "<b>Hiciste click</b>";
+      };
+      console.log(miApp);
 
-miApp.onclick = function() {
-	console.log("Hiciste click")
-	miApp.innerHTML = "<b>Hiciste click</b>"
+      function miFuncionClick(aventura) {
+        switch (aventura) {
+          case "mendoza":
+            console.log("Elegiste ", aventura);
+            break;
+          case "cordoba":
+            console.log("Elegiste ", aventura);
+            break;
+          case "tierrafuego":
+            console.log(`Elegiste,${aventura}`);
+            break;
+          default:
+            console.log("No es ninguna de las opciones validas");
+            break;
+        }
+      }
 
-}
-console.log(miApp)
-
-function miFuncionClick(aventura){
-	switch(aventura){
-		case 'mendoza':
-			console.log("Elegiste ", aventura)
-			break;
-		case 'cordoba':
-			console.log("Elegiste ", aventura)
-			break;
-		case 'tierrafuego':
-			console.log(`Elegiste,${aventura}`)
-			break;
-		default:
-			console.log("No es ninguna de las opciones validas")
-			break;
-	}
-
-}
-
-/*
+      /*
 def imprimir(x):
     print(x)
 for x in lista { imprimir(x)}
 */
-// comentario de una sola linea
+      // comentario de una sola linea
 
-</script>
-<script src="js/clock.js"></script>
-<script src="js/dark.js"></script>
-</body>
-</html> 
+      function showOptions(){
+	      document.querySelector("#aventura").classList.toggle("hide")
+      }
+    </script>
+    <script src="js/clock.js"></script>
+    <script src="js/dark.js"></script>
+  </body>
+</html>

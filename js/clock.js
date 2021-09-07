@@ -1,7 +1,7 @@
 
 function showTime(){
     const date = new Date();
-    let h = date.getHours(); // 0 - 23
+    /*let h = date.getHours(); // 0 - 23
     let m = date.getMinutes(); // 0 - 59
     let s = date.getSeconds(); // 0 - 59
     let session = "AM";
@@ -19,11 +19,15 @@ function showTime(){
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
     
-    let time = h + ":" + m + ":" + s + " " + session;
-    document.querySelector("#MyClock").innerText = time;
+    let time = h + ":" + m + ":" + s + " " + session;*/
+    document.querySelector("#MyClock").innerText = date.toString();
+    console.log("Showtime execution")
     
     setTimeout(showTime, 1000);
     
 }
 
-showTime();
+window.onload = (event) => {
+  console.log('page is fully loaded');
+  showTime();
+};
