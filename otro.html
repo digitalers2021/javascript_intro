@@ -1,0 +1,39 @@
+<html>
+<head>
+
+</head>
+<body>
+	<div class="header">
+		<title>Bienvenido a mi sitio</title>
+		<navbar>File | edit | selection</navbar>
+	</div>
+	<div class="content">
+		<div class="menu-left">
+
+		</div>
+		<!-- Web semantic -->
+		<article class="miArticulo">
+			Otro Articulo
+			<a href="js/main.js">Main.js</a>
+			<button>Enviar</button>
+		</article>
+
+		<article id="miArticulo" class="miArticulo">
+			El primer articulo
+		</article>
+				<pepe>Hola soy pepe</pepe>
+
+	</div>
+	<footer>
+
+	</footer>
+
+
+<script>
+	const articulo = document.querySelector(".miArticulo")
+	articulo.textContent = "pepe"
+	console.log(articulo)
+	articulo.innerHTML = "<b>Cambio el contenido html</b>"
+</script>
+</body>
+</html>
